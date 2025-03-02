@@ -1,0 +1,42 @@
+= SPEC-1: AI-Supported Animation Software
+:sectnums:
+:toc:
+
+== Background
+
+The process of creating animations with Manim is powerful but time-consuming, requiring precise scripting and mathematical transformations. While tools like Adobe After Effects offer intuitive interfaces, they lack Manim’s mathematically precise control.
+
+This project aims to bridge the gap between scripting-based animation and creative sketching by introducing an AI-assisted workflow. The software will allow users to sketch vector-based shapes and provide text-based prompts, which an AI model will convert into Manim animation scripts. 
+
+Initially, the proof-of-concept (PoC) version will focus on:
+- **Targeting experienced Manim programmers**, ensuring they can refine AI-generated scripts.
+- **Generating raw Manim code only**, without real-time preview adjustments.
+- **Providing a simple sketchpad interface**, allowing users to draw vector shapes that serve as a basis for AI-generated animations.
+
+
+== Requirements
+
+The proof-of-concept version of the AI-supported animation software will focus on core functionality and essential usability. Features are prioritized using MoSCoW categorization.
+
+**Must-Have (M):**
+- A **vector-based sketchpad** allowing users to draw basic shapes (lines, circles, polygons).
+- A **text prompt input** for users to describe animation behavior.
+- **AI-powered Manim code generation** based on sketches and prompts.
+- A **code editor** where users can refine the generated Manim script.
+- **Export functionality** to save the generated Manim script for execution.
+
+**Should-Have (S):**
+- A **basic UI similar to Adobe Illustrator/Inkscape**, focused on simplicity.
+- **Support for layers or groups** to organize vector elements.
+- **Undo/Redo functionality** in the sketchpad.
+
+**Could-Have (C):**
+- **SVG import support** for predefined vector shapes.
+- **Manim preview integration** (but not real-time rendering).
+- **AI-based refinements**, such as auto-smoothing of paths.
+
+**Won’t-Have (W) (for PoC phase):**
+- Real-time animation previews.
+- Advanced animation timelines or keyframing.
+- Deep learning-based motion inference.
+

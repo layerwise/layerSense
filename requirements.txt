@@ -1,0 +1,8 @@
+flask
+fastapi
+gradio
+langchain
+openai
+langchain-openai
+uvicorn
+fabric

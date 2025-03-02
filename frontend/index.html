@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Animation Sketchpad</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>AI Animation Sketchpad</h1>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <button onclick="setDrawingMode(false)">Select</button>
+        <button onclick="setDrawingMode(true)">Free Draw</button>
+        <button onclick="addRectangle()">Rectangle</button>
+        <button onclick="addCircle()">Circle</button>
+        <button onclick="addLine()">Line</button>
+        <button onclick="deleteSelected()">Delete</button>
+
+        <label>Color: <input type="color" id="colorPicker" value="#000000"></label>
+        <label>Stroke Width: 
+            <select id="strokeWidth">
+                <option value="1">1px</option>
+                <option value="3" selected>3px</option>
+                <option value="5">5px</option>
+            </select>
+        </label>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <button id="sendToBackend">Send to Backend</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
