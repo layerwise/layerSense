@@ -1,5 +1,21 @@
 Project Outline: AI-Supported Animation Software (PoC)
 
+= SPEC-1: AI-Supported Animation Software
+:sectnums:
+:toc:
+
+== Background
+
+The process of creating animations with Manim is powerful but time-consuming, requiring precise scripting and mathematical transformations. While tools like Adobe After Effects offer intuitive interfaces, they lack Manim’s mathematically precise control.
+
+This project aims to bridge the gap between scripting-based animation and creative sketching by introducing an AI-assisted workflow. The software will allow users to sketch vector-based shapes and provide text-based prompts, which an AI model will convert into Manim animation scripts. 
+
+Initially, the proof-of-concept (PoC) version will focus on:
+- **Targeting experienced Manim programmers**, ensuring they can refine AI-generated scripts.
+- **Generating raw Manim code only**, without real-time preview adjustments.
+- **Providing a simple sketchpad interface**, allowing users to draw vector shapes that serve as a basis for AI-generated animations.
+
+
 Phase 1: Project Setup & Basic UI
 
     [x] Set up a Git repository (e.g., GitHub/GitLab).
@@ -14,8 +30,8 @@ Phase 2: Backend Development & AI Integration
     [] Integrate LangChain for AI-powered Manim code generation.
         [x] Basic prompt and functionality
         [x] GPT-4o backend
-        [] o3-mini backend
-        [] Make code extractable
+        [x] o1-mini backend
+        [x] Make code extractable
     [] Run generated manim scripts in a backend service
     [] Define structured AI prompts for converting vector shapes to Manim code.
     [] Implement API routes for text prompt + vector data processing.

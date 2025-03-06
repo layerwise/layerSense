@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Animation Sketchpad</title>
+
+    <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>AI Animation Sketchpad</h1>
 
-    <!-- Toolbar -->
-    <div class="toolbar">
-        <button onclick="setDrawingMode(false)">Select</button>
-        <button onclick="setDrawingMode(true)">Free Draw</button>
-        <button onclick="addRectangle()">Rectangle</button>
-        <button onclick="addCircle()">Circle</button>
-        <button onclick="addLine()">Line</button>
-        <button onclick="deleteSelected()">Delete</button>
+    <div class="container">
+        <!-- Sketchpad + Toolbar -->
+        <div class="sketchpad-container">
+            <fieldset class="toolbar">
+                <legend>Tools</legend>
+                <button type="button" onclick="setDrawingMode(false)">Select</button>
+                <button type="button" onclick="setDrawingMode(true)">Free Draw</button>
+                <button type="button" onclick="addRectangle()">Rectangle</button>
+                <button type="button" onclick="addCircle()">Circle</button>
+                <button type="button" onclick="addLine()">Line</button>
+                <button type="button" onclick="deleteSelected()">Delete</button>
 
-        <label>Color: <input type="color" id="colorPicker" value="#000000"></label>
-        <label>Stroke Width: 
-            <select id="strokeWidth">
-                <option value="1">1px</option>
-                <option value="3" selected>3px</option>
-                <option value="5">5px</option>
-            </select>
-        </label>
+                <label>Color: <input type="color" id="colorPicker" value="#000000"></label>
+                <label>Stroke Width: 
+                    <select id="strokeWidth">
+                        <option value="1">1px</option>
+                        <option value="3" selected>3px</option>
+                        <option value="5">5px</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <!-- Code Editor -->
+        <div id="editor-container"></div>
     </div>
 
-    <canvas id="canvas"></canvas>
-    <button id="sendToBackend">Send to Backend</button>
+    <!--div id="editor-container" style="width:800px; height:400px; border:1px solid black;"></div -->
+    <button id="sendToBackend" type="button">Send to Backend</button>
+    <button id="runAnimation" type="button">Run Animation</button>
 
     <script src="script.js"></script>
 </body>

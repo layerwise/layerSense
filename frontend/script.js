@@ -107,8 +107,8 @@ document.getElementById("sendToBackend").addEventListener("click", async () => {
     if (!textPrompt) return;
 
     const jsonData = JSON.stringify({
-        vector_data: canvas.toJSON(),
-        text_prompt: textPrompt
+        vector_json: canvas.toJSON(),
+        user_prompt: textPrompt
     });
 
     console.log("Sending data to backend:", jsonData);
